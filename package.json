@@ -1,0 +1,12 @@
+{
+    "name": "com.hybelstudio.physics-library",
+    "version": "1.0.0",
+    "displayName": "Physics Library",
+    "description": "This package acts as a wrapper around Unity's build in physics as well as adding a lot of extra functionality. The biggest goal with this asset is consistency on all levels. The API for 2D should be consistent with the API for 3D, the various functions' signatures should follow a pattern across the entire code-base.",
+    "unity": "2021.3",
+    "author": {
+        "name": "Brage Ingebrigtsen",
+        "email": "hybelstudio@gmail.com",
+        "url": ""
+    }
+}
