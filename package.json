@@ -6,7 +6,7 @@
     "unity": "2021.3",
     "dependencies": {
         "com.unity.mathematics": "1.2.6",
-        "com.hybelstudio.extension-methods": "1.0.0"
+        "com.hybelstudio.extension-methods": "https://github.com/HybelStudio/physics-library.git"
     },
     "author": {
         "name": "Brage Ingebrigtsen",
