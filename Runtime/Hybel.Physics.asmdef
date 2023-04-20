@@ -1,9 +1,9 @@
 {
-    "name": "Skypex.Physics",
-    "rootNamespace": "",
+    "name": "Hybel.Physics",
+    "rootNamespace": "Hybel.Physics",
     "references": [
         "GUID:d8b63aba1907145bea998dd612889d6b",
-        "GUID:dad69a8debae1d745a33dcb65b5c5a4f"
+        "GUID:0e9ef3a44e424c14493e66adc3acdfd9"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
