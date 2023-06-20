@@ -2,9 +2,9 @@
     "name": "Hybel.Physics",
     "rootNamespace": "Hybel.Physics",
     "references": [
-        "GUID:d8b63aba1907145bea998dd612889d6b",
-        "GUID:0e9ef3a44e424c14493e66adc3acdfd9",
-        "GUID:3355c75d26e33ba49a6e6ee71179011d"
+        "Unity.Mathematics",
+        "Hybel.UnityExtensionMethods",
+        "Hybel.ExtensionMethods"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
