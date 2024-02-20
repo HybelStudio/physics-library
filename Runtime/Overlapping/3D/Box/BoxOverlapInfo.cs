@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hybel
 {
-    public struct BoxOverlapInfo
+    public readonly struct BoxOverlapInfo
     {
         public readonly Collider[] Colliders;
         public readonly BoxOverlap Overlap;

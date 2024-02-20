@@ -2,6 +2,6 @@ namespace Hybel
 {
     public class OverlapAPI
     {
-        public delegate TResult OverlapIterationFunc<TResult>(int iteration);
+        public delegate TResult OverlapIterationFunc<out TResult>(int iteration);
     }
 }

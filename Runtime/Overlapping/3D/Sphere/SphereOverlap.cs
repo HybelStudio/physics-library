@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hybel
 {
-    public struct SphereOverlap : IEquatable<SphereOverlap>
+    public readonly struct SphereOverlap : IEquatable<SphereOverlap>
     {
         public readonly Vector3 Position;
         public readonly float Radius;

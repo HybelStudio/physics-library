@@ -12,7 +12,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radius, out Collider[] overlap))
                     yield return overlap;
             }
@@ -25,7 +25,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radius, layerMask, out Collider[] overlap))
                     yield return overlap;
             }
@@ -38,7 +38,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap))
                     yield return overlap;
             }
@@ -52,7 +52,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radiusPerOverlap(i), out Collider[] overlap))
                     yield return overlap;
             }
@@ -65,7 +65,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radiusPerOverlap(i), layerMask, out Collider[] overlap))
                     yield return overlap;
             }
@@ -78,7 +78,7 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radiusPerOverlap(i), layerMask, queryTriggerInteraction, out Collider[] overlap))
                     yield return overlap;
             }
@@ -93,8 +93,8 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, out Collider[] colliders);
 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));
@@ -110,8 +110,8 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, layerMask, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, layerMask, out Collider[] colliders);
                 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));
@@ -127,8 +127,8 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] colliders);
                 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));
@@ -145,9 +145,9 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, out Collider[] colliders);
                 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));
@@ -163,9 +163,9 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, layerMask, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, layerMask, out Collider[] colliders);
                 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));
@@ -181,9 +181,9 @@ namespace Hybel
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] colliders);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] colliders);
                 
                 if (didHit)
                     yield return new SphereOverlapInfo(colliders, new SphereOverlap(newPosition, radius));

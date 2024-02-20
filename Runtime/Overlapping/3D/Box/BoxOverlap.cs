@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Hybel
 {
-    public struct BoxOverlap : IEquatable<BoxOverlap>
+    public readonly struct BoxOverlap : IEquatable<BoxOverlap>
     {
         public readonly Vector3 Center;
         public readonly Vector3 HalfExtents;

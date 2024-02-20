@@ -10,11 +10,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radius, out Collider[] overlap))
                     colliders.Add(overlap);
             }
@@ -27,11 +27,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
 
                 if (Sphere(newPosition, radius, layerMask, out Collider[] overlap))
                     colliders.Add(overlap);
@@ -45,11 +45,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
 
                 if (Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap))
                     colliders.Add(overlap);
@@ -64,13 +64,13 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, out Collider[] overlap);
 
                 if (didHit)
                 {
@@ -92,13 +92,13 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, layerMask, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, layerMask, out Collider[] overlap);
 
                 if (didHit)
                 {
@@ -120,13 +120,13 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                bool didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap);
 
                 if (didHit)
                 {
@@ -150,11 +150,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
                 if (Sphere(newPosition, radiusPerOverlap(i), out Collider[] overlap))
                     colliders.Add(overlap);
             }
@@ -167,11 +167,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
 
                 if (Sphere(newPosition, radiusPerOverlap(i), layerMask, out Collider[] overlap))
                     colliders.Add(overlap);
@@ -185,11 +185,11 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
+                Vector3 newPosition = position + (positionIncrement * i);
 
                 if (Sphere(newPosition, radiusPerOverlap(i), layerMask, queryTriggerInteraction, out Collider[] overlap))
                     colliders.Add(overlap);
@@ -204,14 +204,14 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, out Collider[] overlap);
 
                 if (didHit)
                 {
@@ -233,14 +233,14 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, layerMask, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, layerMask, out Collider[] overlap);
 
                 if (didHit)
                 {
@@ -262,14 +262,14 @@ namespace Hybel
             float distanceDelta = totalDistance / (numberOfSpheres - 1);
             Vector3 positionIncrement = direction.normalized * distanceDelta;
 
-            List<Collider[]> colliders = new List<Collider[]>(numberOfSpheres);
-            List<SphereOverlap> sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
+            var colliders = new List<Collider[]>(numberOfSpheres);
+            var sphereOverlapList = new List<SphereOverlap>(numberOfSpheres);
 
             for (int i = 0; i < numberOfSpheres; i++)
             {
-                var newPosition = position + (positionIncrement * i);
-                var radius = radiusPerOverlap(i);
-                var didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap);
+                Vector3 newPosition = position + (positionIncrement * i);
+                float radius = radiusPerOverlap(i);
+                bool didHit = Sphere(newPosition, radius, layerMask, queryTriggerInteraction, out Collider[] overlap);
 
                  if (didHit)
                 {

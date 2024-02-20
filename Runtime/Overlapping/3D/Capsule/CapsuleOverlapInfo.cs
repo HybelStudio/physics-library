@@ -2,12 +2,12 @@
 
 namespace Hybel
 {
-    public readonly struct SphereOverlapInfo
+    public readonly struct CapsuleOverlapInfo
     {
         public readonly Collider[] Colliders;
-        public readonly SphereOverlap Overlap;
+        public readonly CapsuleOverlap Overlap;
 
-        public SphereOverlapInfo(Collider[] colliders, SphereOverlap overlap)
+        public CapsuleOverlapInfo(Collider[] colliders, CapsuleOverlap overlap)
         {
             Colliders = colliders;
             Overlap = overlap;
